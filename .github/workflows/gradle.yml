@@ -20,13 +20,13 @@ jobs:
         env:
           DOCKER_USERNAME: ${{ github.repository_owner }}
           DOCKER_REGISTRY: ghcr.io
-          IMAGE_NAME: baharehtorki/Final_DevOps # Replace with your image name
-          IMAGE_TAG: latest  # Replace with your desired image tag
+          IMAGE_NAME: baharehtorki/Final_DevOps
+          IMAGE_TAG: latest
         run: |
           docker buildx create --use
           docker buildx build \
             --push \
-            --tag $DOCKER_REGISTRY/$DOCKER_USERNAME/$IMAGE_NAME:$IMAGE_TAG \
+            --tag $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG \
             .
 
       - name: Clean up
