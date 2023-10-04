@@ -20,7 +20,7 @@ jobs:
         env:
           DOCKER_USERNAME: ${{ github.repository_owner }}
           DOCKER_REGISTRY: ghcr.io
-          IMAGE_NAME: baharehtorki/Final_DevOps
+          IMAGE_NAME: baharehtorki/final_devops
           IMAGE_TAG: latest
         run: |
           docker buildx create --use
