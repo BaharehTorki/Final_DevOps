@@ -6,6 +6,7 @@ build/
 
 ### IntelliJ IDEA ###
 branch2
+branch3
 .idea/*.*
 .idea/modules.xml
 .idea/jarRepositories.xml
