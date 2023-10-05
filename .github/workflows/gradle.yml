@@ -46,6 +46,10 @@ jobs:
             --push \
             --tag $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG \
             .
+ # Replace this step with your deployment process
+      - name: Deploy to Test Environment
+        run: |
+          kubectl apply -f deployment.yaml
 
       - name: Clean up
         run: |
