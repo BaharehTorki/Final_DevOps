@@ -21,7 +21,10 @@ jobs:
         with:
           distribution: 'dragonwell'
           java-version: '17'
-  
+
+      - name: Make Gradlew Executable
+        run: chmod +x ./gradlew
+
       - name: Build and Test
         run: ./gradlew build
   
