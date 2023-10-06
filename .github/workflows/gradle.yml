@@ -49,7 +49,7 @@ jobs:
 
       - name: Deploy to Test Environment
         run: |
-          kubectl apply -f deployment.yaml
+          echo "clone the docker image form 'docker pull ghcr.io/baharehtorki/final_devops:latest' and deploy it in your test enviornment!" 
 
       - name: Clean up
         run: |
