@@ -11,7 +11,7 @@ on:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -41,9 +41,9 @@ jobs:
           DOCKER_REGISTRY: ghcr.io
           IMAGE_NAME: baharehtorki/final_devops
           IMAGE_TAG: latest
-          run: |
-            docker buildx create --use
-            docker buildx build \
+        run: |
+          docker buildx create --use
+          docker buildx build \
             --push \
             --tag $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG \
             .
